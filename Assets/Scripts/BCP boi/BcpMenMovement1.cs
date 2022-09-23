@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
 
-public class BcpMenMovement : MonoBehaviour
+public class BcpMenMovement1 : MonoBehaviour
 {
     [SerializeField] private NavMeshAgent navMeshAgent;
 

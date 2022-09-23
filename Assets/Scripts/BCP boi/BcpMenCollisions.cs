@@ -7,7 +7,7 @@ public class BcpMenCollisions : MonoBehaviour
 {
     [SerializeField] private UnityEvent trigger;
 
-    public BcpMenMovement bcpMen;
+    public BcpMenMovement1 bcpMen;
 
     private void OnTriggerEnter(Collider other)
     {

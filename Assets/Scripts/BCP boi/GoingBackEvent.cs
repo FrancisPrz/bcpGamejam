@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GoingBackEvent : MonoBehaviour
 {
-    public BcpMenMovement bcpMen;
+    public BcpMenMovement1 bcpMen;
 
     public void GoingBack()
     {
