@@ -18,7 +18,7 @@ public class Wallet : MonoBehaviour
 
     void Start()
     {
-        
+        PlayerPrefs.DeleteKey(digitalMoneyPrefsName);
     }
 
     void Update()
