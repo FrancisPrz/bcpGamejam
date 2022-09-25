@@ -10,6 +10,7 @@ public class Cama : MonoBehaviour, IInteractable
     public bool Interact(Interactor interactor)
     {
         Debug.Log("Dormir!");
+        //Poner función de reinicio del día
         return true;
     }
 }
