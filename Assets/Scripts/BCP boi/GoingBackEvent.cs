@@ -8,8 +8,11 @@ public class GoingBackEvent : MonoBehaviour
 
     public void GoingBack()
     {
-        bcpMen.destinations.Reverse();
-        bcpMen.called = true;
-        bcpMen.arrived = false;
+        if (bcpMen.arrived == true)
+        {
+            bcpMen.destinations.Reverse();
+            bcpMen.arrived = false;
+            bcpMen.indx = 0;
+        }
     }
 }

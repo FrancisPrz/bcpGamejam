@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Events;
 
 public class BcpMenMovement1 : MonoBehaviour
 {
@@ -12,14 +11,13 @@ public class BcpMenMovement1 : MonoBehaviour
 
     public int indx;
 
-    public bool called = true;
-    public bool arrived = false;
+    public bool arrived;
 
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         indx = 0;
-        called = true;
+        arrived = false;
     }
 
     void Update()
@@ -29,7 +27,7 @@ public class BcpMenMovement1 : MonoBehaviour
 
     public void Movement()
     {
-        if (called == true && arrived == false)
+        if (arrived == false)
         {
             navMeshAgent.destination = destinations[indx].transform.position;
         }
