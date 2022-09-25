@@ -12,12 +12,14 @@ public class BcpMenMovement1 : MonoBehaviour
     public int indx;
 
     public bool arrived;
+    public bool eating;
 
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         indx = 0;
         arrived = false;
+        eating = false;
     }
 
     void Update()
@@ -27,7 +29,7 @@ public class BcpMenMovement1 : MonoBehaviour
 
     public void Movement()
     {
-        if (arrived == false)
+        if (arrived == false && eating == false)
         {
             navMeshAgent.destination = destinations[indx].transform.position;
         }

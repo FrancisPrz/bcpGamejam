@@ -6,6 +6,9 @@ TagManager:
   tags:
   - BCP boi
   - arrived
+  - PlayerInteraction
+  - NpcInteraction
+  - eating
   layers:
   - Default
   - TransparentFX

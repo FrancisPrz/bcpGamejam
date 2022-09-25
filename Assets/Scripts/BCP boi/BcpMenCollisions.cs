@@ -5,15 +5,24 @@ using UnityEngine;
 public class BcpMenCollisions : MonoBehaviour
 {
     public BcpMenMovement1 bcpMen;
-    public GoingBackEvent goingBack;
+
+    public Collider readyToPickUpFood;
+
+    public HasFood hasFood;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("arrived"))
         {
-            bcpMen.arrived = true;
-            Debug.Log("LlegoBCPboi");
-            goingBack.GoingBack();
+            readyToPickUpFood.enabled = true;
+
+            Debug.Log("Llego BCPboi a pedir comida");
+        }
+
+        if (other.gameObject.CompareTag("eating"))
+        {
+            Debug.Log("BCPboi llego a su mesa");
+            hasFood.EatingFood();
         }
     }
 }

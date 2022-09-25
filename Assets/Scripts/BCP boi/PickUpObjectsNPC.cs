@@ -24,12 +24,9 @@ public class PickUpObjectsNPC : MonoBehaviour
             pickedObject.GetComponent<Rigidbody>().useGravity = false;
             pickedObject.GetComponent<Rigidbody>().isKinematic = true;
             food.food = pickedObject;
-        }
-
-        if (food.food != null)
-        {
+            Debug.Log("BCPboi agarro su comida");
             menMovement1.arrived = false;
-            Debug.Log("BCPboi agarro una comida");
+            menMovement1.indx++;
         }
     }
 }
