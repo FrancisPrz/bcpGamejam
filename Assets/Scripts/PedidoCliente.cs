@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class PedidoCliente : MonoBehaviour
 {
-    public Sprite[] imagenesComidas = new Sprite[3];
+
+    public Sprite[] imagenesComidas = new Sprite[4];
     public Image imagenPedido;
     public Sprite[] imagenAnimo = new Sprite[2];
 
