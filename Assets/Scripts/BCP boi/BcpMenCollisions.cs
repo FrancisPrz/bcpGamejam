@@ -5,18 +5,36 @@ using UnityEngine;
 public class BcpMenCollisions : MonoBehaviour
 {
     public BcpMenMovement1 bcpMen;
+    public HasFood hasFood;
+    public PedidoCliente pedidoCliente;
+    public Collisions colliderToPay;
 
     public Collider readyToPickUpFood;
 
-    public HasFood hasFood;
+    public InteractionPromptUI interactionPrompt;
+
+    private void Start()
+    {
+        bcpMen = GetComponent<BcpMenMovement1>();
+        hasFood = GetComponent<HasFood>();
+        pedidoCliente = GetComponent<PedidoCliente>();
+        colliderToPay = GetComponent<Collisions>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("arrived"))
+        if (other.gameObject.CompareTag("paying"))
+        {
+            colliderToPay.enabled = true;
+            bcpMen.doingSth = true;
+            Debug.Log("BCPboi quiere ordenar algo.");
+        }
+
+        if (other.gameObject.CompareTag("waiting"))
         {
             readyToPickUpFood.enabled = true;
-
-            Debug.Log("Llego BCPboi a pedir comida");
+            interactionPrompt.SetUp("");
+            Debug.Log("BCPboi llego a pedir comida");
         }
 
         if (other.gameObject.CompareTag("eating"))

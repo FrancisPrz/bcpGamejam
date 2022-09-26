@@ -7,16 +7,24 @@ public class HasFood : MonoBehaviour
     public GameObject food;
     public BcpMenMovement1 bcpMen;
 
+    public InteractionPromptUI interactionPrompt;
+
+    private void Start()
+    {
+        bcpMen = GetComponent<BcpMenMovement1>();
+    }
+
     public void EatingFood()
     {
         Debug.Log("BCPboi comiendo");
-        bcpMen.eating = true;
-        Destroy(food, 4f);
-        Invoke(nameof(GoOutside), 4f);
+        bcpMen.doingSth = true;
+        Destroy(food, 2.5f);
+        Invoke(nameof(GoOutside), 2.6f);
     }
 
     public void GoOutside()
     {
-        bcpMen.eating = false;
+        bcpMen.doingSth = false;
+        interactionPrompt.SetUp("");
     }
 }

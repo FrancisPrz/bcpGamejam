@@ -5,24 +5,28 @@ using UnityEngine.UI;
 
 public class PedidoCliente : MonoBehaviour
 {
-
     public Sprite[] imagenesComidas = new Sprite[3];
     public Image imagenPedido;
     public Sprite[] imagenAnimo = new Sprite[2];
 
+    public int nroPedido;
+
     public float tiempoAtencion;
     public bool atendido;
     public float counter;
+
+
+    public BcpMenMovement1 bcpMen;
     
     void Start()
     {
         atendido = false;
-        int nroPedido = Random.Range(0, imagenesComidas.Length - 1);
+        nroPedido = Random.Range(0, imagenesComidas.Length);
         Debug.Log(nroPedido);
         imagenPedido.sprite = imagenesComidas[nroPedido];
+        bcpMen = GetComponent<BcpMenMovement1>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         counter += Time.deltaTime;
@@ -30,18 +34,19 @@ public class PedidoCliente : MonoBehaviour
         if (atendido)
         {
             imagenPedido.sprite = imagenAnimo[0];
-            Retirada();
+            //Retirada();
         }
 
         if (counter > tiempoAtencion && !atendido)
         {
             imagenPedido.sprite = imagenAnimo[1];
+            bcpMen.doingSth = false;
             Retirada();
         }
     }
 
     public void Retirada()
-    { 
-    
+    {
+        bcpMen.indx = bcpMen.destinations.Count - 1;
     }
 }

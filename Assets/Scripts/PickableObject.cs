@@ -7,6 +7,15 @@ public class PickableObject : MonoBehaviour
     public bool isPickable = true;
     public bool isPickableForNpc = true;
 
+    public int productNumber;
+
+    public PedidoCliente pedidoCliente;
+
+    void Update()
+    {
+        pedidoCliente = GameObject.FindGameObjectWithTag("BCP boi").GetComponent<PedidoCliente>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("PlayerInteraction"))
@@ -16,7 +25,10 @@ public class PickableObject : MonoBehaviour
 
         if (other.CompareTag("NpcInteraction"))
         {
-            other.GetComponentInParent<PickUpObjectsNPC>().objectToPickUp = this.gameObject;
+            if (pedidoCliente.nroPedido == productNumber)
+            {
+                other.GetComponentInParent<PickUpObjectsNPC>().objectToPickUp = this.gameObject;
+            }
         }
     }
 
