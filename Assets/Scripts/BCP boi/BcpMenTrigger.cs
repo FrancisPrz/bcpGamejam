@@ -10,7 +10,7 @@ public class BcpMenTrigger : MonoBehaviour
     {
         if (other.gameObject.CompareTag("arrived"))
         {
-            menMovement1.arrived = true;
+            //menMovement1.arrived = true;
             Debug.Log("LLEGO");
         }
     }
