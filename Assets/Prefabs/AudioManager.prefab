@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6073731570985464836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6073731570985464858}
+  - component: {fileID: 6073731570985464837}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6073731570985464858
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6073731570985464836}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6073731570985464837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6073731570985464836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3c8d15dcefcc544da4706edcfde35bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: AbrirPuerta
+    clip: {fileID: 8300000, guid: 1e45c7b16291a8144a51d2d16bd9a569, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: AgarraCosas
+    clip: {fileID: 8300000, guid: 2f096a0ed039f414286ead0d618fce30, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Cama
+    clip: {fileID: 8300000, guid: 5ab5c503a48dc8a4e8d8cd4f46606a2b, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Caminar
+    clip: {fileID: 8300000, guid: 7aa654e1ea90a0241a150ffa7f491c2d, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: Comer
+    clip: {fileID: 8300000, guid: 375d0eb5acb250942844de25f5e3fd8a, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: Converacion_1
+    clip: {fileID: 8300000, guid: 4f1be1fa43b05c6458a146e6d9f5171d, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: Conversacion_2
+    clip: {fileID: 8300000, guid: babeff7c9299fc0478673ec86ee63959, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: Desmayarse
+    clip: {fileID: 8300000, guid: bd970dce6bdc0484abee8a6bc1878007, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Enojado
+    clip: {fileID: 8300000, guid: c66686b33b699d2429c03cda533e705a, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: Feliz
+    clip: {fileID: 8300000, guid: 7b857e89b9e87b74291b94046c58635d, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Mouse_Click
+    clip: {fileID: 8300000, guid: 45daf41c68c8b494e9b7d26d428db719, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Musica_1
+    clip: {fileID: 8300000, guid: cb22a38b12c20b744a517a88f8a148ac, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: Musica_2
+    clip: {fileID: 8300000, guid: f4e1b9e07fcaa114baa4aa5db5b331ca, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: Musica_3
+    clip: {fileID: 8300000, guid: a510ae7851eb3974a9e72bae97b9faae, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: Musica_4
+    clip: {fileID: 8300000, guid: 06f64711d006d2d44a996acce5db5f8e, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: Musica_5
+    clip: {fileID: 8300000, guid: 43ad19916cec441499ff263b4152329b, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 1
+    source: {fileID: 0}
+  sceneTheme: 
