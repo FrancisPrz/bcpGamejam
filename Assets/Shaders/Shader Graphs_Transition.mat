@@ -24,7 +24,7 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _size: 2.0023878
+    - _size: 2.0027912
     m_Colors: []
   m_BuildTextureStacks: []
 --- !u!114 &191986164590312195

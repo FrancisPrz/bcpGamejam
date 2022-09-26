@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PickableObject : MonoBehaviour
 {
+    private Wallet player;
     public bool isPickable = true;
     public bool isPickableForNpc = true;
 
@@ -11,6 +12,10 @@ public class PickableObject : MonoBehaviour
 
     public PedidoCliente pedidoCliente;
 
+    private void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Wallet>();
+    }
     void Update()
     {
         pedidoCliente = GameObject.FindGameObjectWithTag("BCP boi").GetComponent<PedidoCliente>();
@@ -25,6 +30,8 @@ public class PickableObject : MonoBehaviour
 
         if (other.CompareTag("NpcInteraction"))
         {
+            player.phisicalMoney += 10;
+            Destroy(gameObject);
             if (pedidoCliente.nroPedido == productNumber)
             {
                 other.GetComponentInParent<PickUpObjectsNPC>().objectToPickUp = this.gameObject;

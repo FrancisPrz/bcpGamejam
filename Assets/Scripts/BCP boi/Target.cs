@@ -15,7 +15,7 @@ public class Target : MonoBehaviour
         point = GameObject.FindGameObjectWithTag("Point").transform;
         meshAgent.SetDestination(point.position);
         yield return new WaitUntil(()=>meshAgent.remainingDistance <= 0.1f);
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(15f);
         meshAgent.SetDestination(start);
     }
 

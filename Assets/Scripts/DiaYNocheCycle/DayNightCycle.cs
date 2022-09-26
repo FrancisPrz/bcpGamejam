@@ -13,7 +13,7 @@ public class DayNightCycle : MonoBehaviour
         if (_lock) return;
 
         Vector3 rotation = transform.localEulerAngles;
-        print(rotation.x);
+        //print(rotation.x);
         rotation.x = rotation.x > 0 ? rotation.x -= Time.deltaTime * speed : 0;
         transform.localEulerAngles = rotation;
 

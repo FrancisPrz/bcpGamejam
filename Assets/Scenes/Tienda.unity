@@ -3157,7 +3157,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 248457249}
-  m_LocalRotation: {x: 0.38268346, y: -0.000000022481224, z: 0.0000000093120285, w: 0.92387956}
+  m_LocalRotation: {x: 0.38268346, y: 0.000000022481213, z: -0.000000009312023, w: 0.92387956}
   m_LocalPosition: {x: 2.2722032, y: 10.261694, z: -15.540876}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6840,7 +6840,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 431026062}
-  m_LocalRotation: {x: 0.38268346, y: -0.000000022481224, z: 0.0000000093120285, w: 0.92387956}
+  m_LocalRotation: {x: 0.38268346, y: 0.000000022481213, z: -0.000000009312023, w: 0.92387956}
   m_LocalPosition: {x: 2.2722032, y: 10.261694, z: -15.540876}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8472,7 +8472,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &536718193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16503,7 +16503,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1088494503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17047,6 +17047,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4709895532104434408, guid: c3c9ea0d1f2b430458bd36ba7aa96de0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4709895532475715521, guid: c3c9ea0d1f2b430458bd36ba7aa96de0, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -17141,7 +17145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4709895532475715545, guid: c3c9ea0d1f2b430458bd36ba7aa96de0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3c9ea0d1f2b430458bd36ba7aa96de0, type: 3}
@@ -21196,7 +21200,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1580417196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22341,7 +22345,7 @@ MonoBehaviour:
           m_StringArgument: Cuarto
           m_BoolArgument: 0
         m_CallState: 2
-  speed: 10
+  speed: 0.2
   rotationScale: 1
 --- !u!1 &1648657599
 GameObject:
@@ -25914,7 +25918,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1996253372
 MonoBehaviour:
   m_ObjectHideFlags: 0
