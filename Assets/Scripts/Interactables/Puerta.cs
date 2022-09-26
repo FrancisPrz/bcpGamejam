@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
-public class Puerta : MonoBehaviour,IInteractable
+public class Puerta : MonoBehaviour, IInteractable
 {
+    [SerializeField] private UnityEvent _event;
     [SerializeField] private string prompt;
 
     public string nameScene;
@@ -13,7 +15,8 @@ public class Puerta : MonoBehaviour,IInteractable
 
     public bool Interact(Interactor interactor)
     {
-        SceneManager.LoadScene(nameScene);
+        _event.Invoke();
+        //SceneManager.LoadScene(nameScene);
         return true;
     }
 

@@ -8,7 +8,7 @@ public class SpawnerPollo : MonoBehaviour
     public GameObject comida;
     public GameObject puntoDeAparicion;
 
-    void Update()
+    void Start()
     {
         comida = GameObject.FindGameObjectWithTag("Pollo");
 
