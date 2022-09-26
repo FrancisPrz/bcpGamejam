@@ -2,34 +2,46 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Events;
 
 public class BcpMenMovement1 : MonoBehaviour
 {
-    [SerializeField] private NavMeshAgent navMeshAgent;
+    public NavMeshAgent navMeshAgent;
+    private Rigidbody rb;
 
     public List<GameObject> destinations = new List<GameObject>();
 
     public int indx;
 
-    public bool called = true;
-    public bool arrived = false;
+    public bool doingSth;
 
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+        rb = GetComponent<Rigidbody>();
         indx = 0;
-        called = true;
+        doingSth = false;
     }
 
     void Update()
     {
         Movement();
+
+        if(indx == destinations.Count)
+        {
+            Destroy(gameObject, 1f);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        rb.velocity = Vector3.zero;
     }
 
     public void Movement()
     {
-        if (called == true && arrived == false)
+        if (doingSth) return;
+
+        if (doingSth == false)
         {
             navMeshAgent.destination = destinations[indx].transform.position;
         }

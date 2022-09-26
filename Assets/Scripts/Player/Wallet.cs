@@ -5,10 +5,10 @@ using UnityEngine;
 public class Wallet : MonoBehaviour
 {
     public int digitalMoney;
-    public int fisicalMoney;
+    public int phisicalMoney;
 
     private string digitalMoneyPrefsName = "Digital";
-    private string fisicalMoneyPrefsName = "Fisical";
+    private string phisicalMoneyPrefsName = "Phisical";
 
 
     private void Awake()
@@ -34,13 +34,13 @@ public class Wallet : MonoBehaviour
     private void SaveData()
     {
         PlayerPrefs.SetInt(digitalMoneyPrefsName, digitalMoney);
-        PlayerPrefs.SetInt(fisicalMoneyPrefsName, fisicalMoney);
+        PlayerPrefs.SetInt(phisicalMoneyPrefsName, phisicalMoney);
 
     }
 
     private void LoadData()
     {
         digitalMoney = PlayerPrefs.GetInt(digitalMoneyPrefsName, 0);
-        fisicalMoney = PlayerPrefs.GetInt(fisicalMoneyPrefsName, 0);
+        phisicalMoney = PlayerPrefs.GetInt(phisicalMoneyPrefsName, 0);
     }
 }

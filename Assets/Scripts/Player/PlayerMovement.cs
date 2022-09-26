@@ -8,10 +8,16 @@ public class PlayerMovement : MonoBehaviour
     public float maxSpeed;
 
     public Rigidbody rgbd;
+    public Animator anim;
+
+    public Transform playerTransform;
+    public Vector3 lastTransform;
 
     void Start()
     {
         rgbd = GetComponent<Rigidbody>();
+        playerTransform = GetComponent<Transform>();
+        anim = GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -29,6 +35,22 @@ public class PlayerMovement : MonoBehaviour
         if (rgbd.velocity.magnitude > maxSpeed)
         {
             rgbd.velocity = Vector3.ClampMagnitude(rgbd.velocity, maxSpeed);
+        }
+
+        if (rgbd.velocity.normalized != lastTransform && rgbd.velocity != Vector3.zero)
+        {
+            lastTransform = rgbd.velocity.normalized;
+        }
+
+        playerTransform.rotation = Quaternion.LookRotation(lastTransform);
+
+        if (rgbd.velocity.x != 0 || rgbd.velocity.z != 0)
+        {
+            anim.SetBool("isMoving", true);
+        }
+        else
+        {
+            anim.SetBool("isMoving", false);
         }
     }
 }
