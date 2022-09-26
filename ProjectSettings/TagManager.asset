@@ -14,6 +14,8 @@ TagManager:
   - Torta
   - paying
   - waiting
+  - toPay
+  - Point
   layers:
   - Default
   - TransparentFX

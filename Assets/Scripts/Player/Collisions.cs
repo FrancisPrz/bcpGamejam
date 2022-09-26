@@ -20,8 +20,7 @@ public class Collisions : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             triggers.Invoke();
-            enabled = false;
-            bcpMen.navMeshAgent.acceleration = 1f;
+            
         }
     }
 }

@@ -439,6 +439,7 @@ MonoBehaviour:
   bcpMen: {fileID: 4709895532475715523}
   hasFood: {fileID: 4709895532475715524}
   pedidoCliente: {fileID: 4709895532475715545}
+  colliderToPay: {fileID: 0}
   readyToPickUpFood: {fileID: 4709895532104434408}
   interactionPrompt: {fileID: 4709895532869783855}
 --- !u!114 &4709895532475715526

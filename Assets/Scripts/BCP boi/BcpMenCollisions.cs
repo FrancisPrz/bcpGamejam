@@ -7,26 +7,30 @@ public class BcpMenCollisions : MonoBehaviour
     public BcpMenMovement1 bcpMen;
     public HasFood hasFood;
     public PedidoCliente pedidoCliente;
-    public Collisions colliderToPay;
+    public GameObject colliderToPay;
 
     public Collider readyToPickUpFood;
 
     public InteractionPromptUI interactionPrompt;
+
+    public bool estaEnCaja;
 
     private void Start()
     {
         bcpMen = GetComponent<BcpMenMovement1>();
         hasFood = GetComponent<HasFood>();
         pedidoCliente = GetComponent<PedidoCliente>();
-        colliderToPay = GetComponent<Collisions>();
+        colliderToPay = GameObject.FindGameObjectWithTag("toPay");
+        estaEnCaja = false;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("paying"))
         {
-            colliderToPay.enabled = true;
+            colliderToPay.SetActive(true);
             bcpMen.doingSth = true;
+            estaEnCaja = true;
             Debug.Log("BCPboi quiere ordenar algo.");
         }
 

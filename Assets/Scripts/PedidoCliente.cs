@@ -17,6 +17,7 @@ public class PedidoCliente : MonoBehaviour
 
 
     public BcpMenMovement1 bcpMen;
+    public BcpMenCollisions menCollisions;
     
     void Start()
     {
@@ -25,11 +26,15 @@ public class PedidoCliente : MonoBehaviour
         Debug.Log(nroPedido);
         imagenPedido.sprite = imagenesComidas[nroPedido];
         bcpMen = GetComponent<BcpMenMovement1>();
+        menCollisions = GetComponent<BcpMenCollisions>();
     }
 
     void Update()
     {
-        counter += Time.deltaTime;
+        if (menCollisions.estaEnCaja)
+        {
+            counter += Time.deltaTime;
+        }
 
         if (atendido)
         {

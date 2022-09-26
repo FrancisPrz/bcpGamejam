@@ -39,6 +39,8 @@ public class BcpMenMovement1 : MonoBehaviour
 
     public void Movement()
     {
+        if (doingSth) return;
+
         if (doingSth == false)
         {
             navMeshAgent.destination = destinations[indx].transform.position;
